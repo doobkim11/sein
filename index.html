@@ -1,227 +1,253 @@
-<div class="login-container" role="main">
-  <div class="login-card">
-    <div class="welcome-header">
-      <img
-        class="welcome-icon"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6cad3fb54b94aa2320da519c8b3a84494a01de5b8828c3f719369b499a42e1e3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
-        alt="Welcome icon"
-      />
-      <h1>환영합니다</h1>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container" role="main">
+      <div class="login-card">
+        <div class="welcome-header">
+          <img
+            class="welcome-icon"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6cad3fb54b94aa2320da519c8b3a84494a01de5b8828c3f719369b499a42e1e3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+            alt="환영 아이콘"
+          />
+          <h1>환영합니다</h1>
+        </div>
+        <form class="login-form" action="/login" method="post">
+          <div class="input-wrapper">
+            <img
+              class="input-icon"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/55e47747d51fca97fb8685f715daf8a5690c6c409f4e84f98bd0c3cb169dc553?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+              alt="이메일 아이콘"
+            />
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              class="form-input"
+              placeholder="이메일입력해주세요"
+              required
+              aria-required="true"
+              aria-label="이메일입력해주세요"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <img
+              class="input-icon"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e4ae4a95d7a9f6812b6cce0d9f400b2b9ff8ca6dec0e2a81366b1f08d3da6b3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+              alt="비밀번호 아이콘"
+            />
+            <input
+              type="password"
+              id="passwordInput"
+              name="password"
+              class="form-input"
+              placeholder="패스워드입력해주세요"
+              required
+              aria-required="true"
+              aria-label="패스워드입력해주세요"
+              minlength="8"
+            />
+          </div>
+
+          <button type="submit" class="submit-button" aria-label="로그인">
+            <span>확인</span>
+            <img
+              class="button-icon"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbee5a712556e2bd7b771c74a621d5cc2a0c99d1498c60fee2604107c0c43751?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+              alt=""
+            />
+          </button>
+        </form>
+        <button class="close-button" aria-label="닫기">
+          <img
+            class="close-icon"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4996d3421565e6a0d8abee9b6e7a6e890082584a6d06add94d02cd06fb364b24?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+            alt=""
+          />
+        </button>
+      </div>
     </div>
-    <form class="login-form" action="/login" method="post">
-      <div class="input-wrapper">
-        <img
-          class="input-icon"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/55e47747d51fca97fb8685f715daf8a5690c6c409f4e84f98bd0c3cb169dc553?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
-          alt="Email icon"
-        />
-        <input
-          type="email"
-          id="emailInput"
-          name="email"
-          class="form-input"
-          placeholder="이메일입력해주세요"
-          required
-          aria-required="true"
-          aria-label="이메일입력해주세요"
-        />
-      </div>
 
-      <div class="input-wrapper">
-        <img
-          class="input-icon"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e4ae4a95d7a9f6812b6cce0d9f400b2b9ff8ca6dec0e2a81366b1f08d3da6b3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
-          alt="Password icon"
-        />
-        <input
-          type="password"
-          id="passwordInput"
-          name="password"
-          class="form-input"
-          placeholder="패스워드입력해주세요"
-          required
-          aria-required="true"
-          aria-label="패스워드입력해주세요"
-          minlength="8"
-        />
-      </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-      <button type="submit" class="submit-button" aria-label="로그인">
-        <span>확인</span>
-        <img
-          class="button-icon"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbee5a712556e2bd7b771c74a621d5cc2a0c99d1498c60fee2604107c0c43751?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
-          alt=""
-        />
-      </button>
-    </form>
-    <button class="close-button" aria-label="닫기">
-      <img
-        class="close-icon"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4996d3421565e6a0d8abee9b6e7a6e890082584a6d06add94d02cd06fb364b24?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
-        alt=""
-      />
-    </button>
-  </div>
-</div>
+      body {
+        font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
 
-<style>
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("https://images.pexels.com/photos/15838266/pexels-photo-15838266.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, sans-serif;
-  }
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("https://images.pexels.com/photos/15838266/pexels-photo-15838266.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-  .login-card {
-    position: relative;
-    width: 500px;
-    height: 400px;
-    padding: 36px;
-    border-radius: 16px;
-    background-color: rgba(242, 169, 169, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+      .login-card {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        padding: 36px;
+        border-radius: 16px;
+        background-color: rgba(242, 169, 169, 0.2);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-  .welcome-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
+      .welcome-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
 
-  .welcome-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-  }
+      .welcome-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
 
-  h1 {
-    margin: 0;
-    color: #ebedf0;
-    font-size: 20px;
-    font-weight: 600;
-  }
+      h1 {
+        margin: 0;
+        color: #ebedf0;
+        font-size: 20px;
+        font-weight: 600;
+      }
 
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-  }
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+      }
 
-  .input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 28px;
-    border-radius: 16px;
-    background-color: #fac8c8;
-  }
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 28px;
+        border-radius: 16px;
+        background-color: #fac8c8;
+      }
 
-  .input-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
+      .input-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
 
-  .form-input {
-    width: 100%;
-    border: none;
-    background: transparent;
-    color: #997777;
-    font-size: 12px;
-    outline: none;
-  }
+      .form-input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: #997777;
+        font-size: 12px;
+        outline: none;
+        font-family: inherit;
+      }
 
-  .form-input::placeholder {
-    color: #997777;
-  }
+      .form-input::placeholder {
+        color: #997777;
+        opacity: 1;
+      }
 
-  .submit-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 16px;
-    background-color: #007aff;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
+      .submit-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 16px;
+        background-color: #007aff;
+        color: #fff;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        font-family: inherit;
+      }
 
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
+      .submit-button:hover {
+        background-color: #0056b3;
+      }
 
-  .submit-button:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-  }
+      .submit-button:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
 
-  .button-icon {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-  }
+      .button-icon {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+      }
 
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 37px;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
+      .close-button {
+        position: absolute;
+        top: 20px;
+        right: 37px;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
 
-  .close-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
+      .close-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
 
-  @media (max-width: 600px) {
-    .login-card {
-      width: 90%;
-      height: auto;
-      min-height: 400px;
-      margin: 20px;
-      padding: 24px;
-    }
+      @media (max-width: 600px) {
+        .login-card {
+          width: 90%;
+          height: auto;
+          min-height: 400px;
+          margin: 20px;
+          padding: 24px;
+        }
 
-    .input-wrapper {
-      padding: 10px 20px;
-    }
+        .input-wrapper {
+          padding: 10px 20px;
+        }
 
-    .submit-button {
-      padding: 12px 24px;
-    }
-  }
+        .submit-button {
+          padding: 12px 24px;
+        }
+      }
 
-  @media (prefers-reduced-motion: reduce) {
-    .submit-button {
-      transition: none;
-    }
-  }
+      @media (prefers-reduced-motion: reduce) {
+        .submit-button {
+          transition: none;
+        }
+      }
 
-  @media screen and (forced-colors: active) {
-    .submit-button {
-      border: 1px solid ButtonText;
-    }
-  }
-</style>
+      @media screen and (forced-colors: active) {
+        .submit-button {
+          border: 1px solid ButtonText;
+        }
+      }
+    </style>
+  </body>
+</html>
