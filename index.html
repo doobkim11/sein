@@ -1,199 +1,227 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>박만준 - 웹퍼블리셔 포트폴리오</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #000;
-        color: #eee;
-        font-family: "Roboto", sans-serif;
-      }
-      .section {
-        padding: 4rem 2rem;
-      }
-      .profile-img {
-        border-radius: 50%;
-        max-width: 150px;
-      }
-      nav ul li a {
-        color: #fff;
-      }
-      .black-white-card {
-        background-color: #000;
-        border: 1px solid #fff;
-        box-shadow: none;
-      }
-      header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-      }
-      .main-title {
-        font-size: 2.5rem;
-        text-align: center;
-        margin: 2rem 0;
-      }
-      .portfolio-section img {
-        max-width: 100%;
-        height: auto;
-      }
-      footer {
-        padding: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="black" aria-label="Main Navigation">
-        <div class="nav-wrapper container">
-          <a href="#" class="brand-logo" aria-label="박만준 메인 로고"
-            >박만준</a
-          >
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#home" aria-label="홈으로 이동">HOME</a></li>
-            <li><a href="#about" aria-label="소개 섹션으로 이동">ABOUT</a></li>
-            <li>
-              <a href="#experience" aria-label="경험 섹션으로 이동"
-                >EXPERIENCE</a
-              >
-            </li>
-            <li>
-              <a href="#portfolio" aria-label="포트폴리오 섹션으로 이동"
-                >PORTFOLIO</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<div class="login-container" role="main">
+  <div class="login-card">
+    <div class="welcome-header">
+      <img
+        class="welcome-icon"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6cad3fb54b94aa2320da519c8b3a84494a01de5b8828c3f719369b499a42e1e3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+        alt="Welcome icon"
+      />
+      <h1>환영합니다</h1>
+    </div>
+    <form class="login-form" action="/login" method="post">
+      <div class="input-wrapper">
+        <img
+          class="input-icon"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/55e47747d51fca97fb8685f715daf8a5690c6c409f4e84f98bd0c3cb169dc553?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+          alt="Email icon"
+        />
+        <input
+          type="email"
+          id="emailInput"
+          name="email"
+          class="form-input"
+          placeholder="이메일입력해주세요"
+          required
+          aria-required="true"
+          aria-label="이메일입력해주세요"
+        />
+      </div>
 
-    <main>
-      <section id="home" class="section" aria-labelledby="home-title">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 center">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="박만준 프로필 사진"
-                class="profile-img"
-              />
-              <h1 id="home-title" class="main-title">
-                변화를 선도하는 UX 디자이너
-              </h1>
-              <p>
-                끊임없이 배움을 추구하며 사용자 중심의 혁신적인 디자인을 만들어
-                갑니다.
-              </p>
-              <a
-                href="#about"
-                class="btn waves-effect waves-light"
-                aria-label="소개 섹션으로 이동"
-                >더 알아보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="input-wrapper">
+        <img
+          class="input-icon"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e4ae4a95d7a9f6812b6cce0d9f400b2b9ff8ca6dec0e2a81366b1f08d3da6b3?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+          alt="Password icon"
+        />
+        <input
+          type="password"
+          id="passwordInput"
+          name="password"
+          class="form-input"
+          placeholder="패스워드입력해주세요"
+          required
+          aria-required="true"
+          aria-label="패스워드입력해주세요"
+          minlength="8"
+        />
+      </div>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="container">
-          <h2 id="about-title">ABOUT</h2>
-          <p>
-            안녕하세요, 저는 박만준입니다. 디지털 서비스 UX 디자인과 인공지능
-            기반의 솔루션 설계에 열정을 가지고 있습니다.
-          </p>
-          <p>e-mail :mini@ahdfsd</p>
-          <span class="material-symbols-outlined">&#xE88A;</span>
-          <p>P: 111-111-1111</p>
-        </div>
-      </section>
+      <button type="submit" class="submit-button" aria-label="로그인">
+        <span>확인</span>
+        <img
+          class="button-icon"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbee5a712556e2bd7b771c74a621d5cc2a0c99d1498c60fee2604107c0c43751?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+          alt=""
+        />
+      </button>
+    </form>
+    <button class="close-button" aria-label="닫기">
+      <img
+        class="close-icon"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4996d3421565e6a0d8abee9b6e7a6e890082584a6d06add94d02cd06fb364b24?placeholderIfAbsent=true&apiKey=390fd3b696ac46d0bfc6d4d558d9c97c"
+        alt=""
+      />
+    </button>
+  </div>
+</div>
 
-      <section
-        id="experience"
-        class="section"
-        aria-labelledby="experience-title"
-      >
-        <div class="container">
-          <h2 id="experience-title">EXPERIENCE</h2>
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="card black-white-card" aria-labelledby="naver-title">
-                <div class="card-content">
-                  <span id="naver-title" class="card-title"
-                    >Naver (5년 6개월)</span
-                  >
-                  <p>
-                    AI 서비스 디자인 팀 리드, 스마트 스피커와 챗봇 프로젝트 주도
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6">
-              <div
-                class="card black-white-card"
-                aria-labelledby="samsung-title"
-              >
-                <div class="card-content">
-                  <span id="samsung-title" class="card-title"
-                    >Samsung Electronics (6년)</span
-                  >
-                  <p>
-                    스마트폰 및 웨어러블 UX 설계, 글로벌 사용자 조사 프로젝트
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<style>
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://images.pexels.com/photos/15838266/pexels-photo-15838266.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, sans-serif;
+  }
 
-      <section
-        id="portfolio"
-        class="section portfolio-section"
-        aria-labelledby="portfolio-title"
-      >
-        <div class="container">
-          <h2 id="portfolio-title">PORTFOLIO</h2>
-          <div class="row">
-            <div class="col s12 m4" aria-labelledby="portfolio1-title">
-              <img src="https://via.placeholder.com/300" alt="Portfolio 1" />
-              <h5 id="portfolio1-title">Project Name</h5>
-              <p>설명 텍스트</p>
-            </div>
-            <div class="col s12 m4" aria-labelledby="portfolio2-title">
-              <img src="https://via.placeholder.com/300" alt="Portfolio 2" />
-              <h5 id="portfolio2-title">Project Name</h5>
-              <p>설명 텍스트</p>
-            </div>
-            <div class="col s12 m4" aria-labelledby="portfolio3-title">
-              <img src="https://via.placeholder.com/300" alt="Portfolio 3" />
-              <h5 id="portfolio3-title">Project Name</h5>
-              <p>설명 텍스트</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+  .login-card {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 36px;
+    border-radius: 16px;
+    background-color: rgba(242, 169, 169, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    <footer class="black white-text center" aria-label="Footer">
-      <p>&copy; 2024 박만준. All rights reserved.</p>
-    </footer>
+  .welcome-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
-</html>
+  .welcome-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  h1 {
+    margin: 0;
+    color: #ebedf0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    border-radius: 16px;
+    background-color: #fac8c8;
+  }
+
+  .input-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .form-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #997777;
+    font-size: 12px;
+    outline: none;
+  }
+
+  .form-input::placeholder {
+    color: #997777;
+  }
+
+  .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 16px;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  .submit-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  .button-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 37px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 600px) {
+    .login-card {
+      width: 90%;
+      height: auto;
+      min-height: 400px;
+      margin: 20px;
+      padding: 24px;
+    }
+
+    .input-wrapper {
+      padding: 10px 20px;
+    }
+
+    .submit-button {
+      padding: 12px 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .submit-button {
+      transition: none;
+    }
+  }
+
+  @media screen and (forced-colors: active) {
+    .submit-button {
+      border: 1px solid ButtonText;
+    }
+  }
+</style>
